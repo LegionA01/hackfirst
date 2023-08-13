@@ -1,0 +1,258 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* important and nice way to add color */
+/* body{ 
+    background: linear-gradient(45deg, #a0a0a0, #3a4452);
+} */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 59px;
+}
+
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+#navbar ul {
+    display: flex;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+#navbar::before {
+    content: "";
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .6;
+}
+
+/* Naviagtion Bar: Logo and Image */
+
+#logo {
+    margin: 25px 30px;
+}
+
+#logo img {
+    margin: -10px -10px;
+    height: 67px;
+    border-radius: 60%;
+}
+
+/* Naviagtion Bar: List Item */
+
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 15px;
+    border-radius: 20px;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+#navbar ul li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    opacity: 0.5;
+}
+
+/* Home Section */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 392px;
+}
+
+#home::before {
+    content: "";
+    background: url('../bgimg.jpg') no-repeat center center/cover;
+    /*../to get out of the current folder*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 550px;
+    width: 100%;
+    z-index: -1;
+    opacity: .4;
+}
+
+#home h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#home p{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem; 
+    font-family: 'Roboto', sans-serif;
+}
+
+/*  Services Section */
+
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box{
+    /* border: 2px solid red; */
+    padding: 24px; 
+    margin: -20px 4px;
+    border-radius: 10px;
+    background-color: rgb(221, 216, 216);
+}
+
+#services div img{
+    /* height: 160px; */
+    width: 300px;
+    display: block;
+    margin: auto;
+    border-radius: 2%;
+}
+
+#services .box p{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Client Section */
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 500px; */
+}
+
+#client-section{
+    position: relative;
+    /* height: 344px; */
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    /* background-color: rgb(232, 232, 232);
+    height: 225px; */
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients img{
+    width: 140px;
+    mix-blend-mode: darken;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+/* Conatact Section */
+ 
+#contact{
+    position: relative;
+    /* margin-top: 201px; */
+}
+
+#contact::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+    /* background: rgb(78, 167, 114); */
+    background: url('../contact.jpg') no-repeat center center/cover;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 25%;
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+}
+
+
+/* footer section */
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    opacity: 0.8;
+}
+
+/* utility class */
+
+.h-primary {
+    font-size: 2.8rem;
+    padding-top: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: none;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 47px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
